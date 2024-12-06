@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/logo.svg";
+import Logo from "../assets/Logo.svg";
 import hand1 from "../assets/image4.png";
 import hand2 from "../assets/image5.png";
 import hand3 from "../assets/image6.png";
