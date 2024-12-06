@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { postContact } from '../redux/async/fetchData';
+import DOMPurify from 'dompurify'
 
 const Form = () => {
     const dispatch = useDispatch();
@@ -10,16 +11,30 @@ const Form = () => {
     const [website, setWebsite] = useState('');
     const [message, setMessage] = useState('');
 
+    const handleChange = (setter) => (e) => {
+        // Membersihkan input menggunakan dompurify
+        const sanitizedValue = DOMPurify.sanitize(e.target.value);
+        setter(sanitizedValue);
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(postContact({ name, email, website, message }));
+
+        const sanitizedData = {
+            name: DOMPurify.sanitize(name),
+            email: DOMPurify.sanitize(email),
+            website: DOMPurify.sanitize(website),
+            message: DOMPurify.sanitize(message),
+        };
+
+        dispatch(postContact(sanitizedData));
         
+        // Reset form fields
         setName('');
         setEmail('');
         setWebsite('');
         setMessage('');
     };
-
     return (
         <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
             <div>
@@ -30,7 +45,7 @@ const Form = () => {
                     placeholder='Name*' 
                     className='border-2 border-black/50 w-full p-4'
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={handleChange(setName)}
                 />
             </div>
             <div>
@@ -41,7 +56,7 @@ const Form = () => {
                     placeholder='Email*' 
                     className='border-2 border-black/50 w-full p-4'
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={handleChange(setEmail)}
                 />
             </div>
             <div>
@@ -52,7 +67,7 @@ const Form = () => {
                     placeholder='Website URL*' 
                     className='border-2 border-black/50 w-full p-4'
                     value={website}
-                    onChange={(e) => setWebsite(e.target.value)}
+                    onChange={handleChange(setWebsite)}
                 />
             </div>
             <div>
@@ -63,7 +78,7 @@ const Form = () => {
                     placeholder='message Details*' 
                     className='border-2 border-black/50 w-full p-4 min-h-36'
                     value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    onChange={handleChange(setMessage)}
                 />
             </div>
             <button type='submit' className='p-4 bg-black text-white mt-4'>Send Proposal</button>

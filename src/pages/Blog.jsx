@@ -2,10 +2,12 @@ import React, { useEffect } from "react";
 import Header from "../components/Header";
 import Brands from "../components/Brands";
 import BlogList from "../components/BlogList";
+import SeoComponent from "../components/SeoComponent";
 
 const Blog = () => {
   return (
     <>
+    <SeoComponent page="blog" />
       <Header
         left={"opacity-0"}
         mousePosition={"bottom"}

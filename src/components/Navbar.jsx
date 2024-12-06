@@ -43,30 +43,33 @@ const Navbar = () => {
         <div className="h-1 w-full bg-black"></div>
       </button>
       <div
-        className={`absolute top-16 lg:right-24 right-16 ${
+        className={`fixed md:top-16 md:h-fit h-full max-md:left-0 top-0 lg:right-24 md:right-16 md:w-fit max-md:gap-4 w-full ${
           isOpen ? "flex" : "hidden"
         } flex-col items-center justify-center bg-white py-2 px-6`}
       >
         <Link to="/">
-          <button onClick={resetNavbar} className="py-1 hover:scale-110 transition duration-200">
+          <button onClick={resetNavbar} className="py-1 hover:scale-110 hover:font-semibold transition duration-200">
             HOME
           </button>
         </Link>
         <Link to="/about">
-          <button onClick={resetNavbar} className="py-1 hover:scale-110 transition duration-200">
+          <button onClick={resetNavbar} className="py-1 hover:scale-110 hover:font-semibold transition duration-200">
             ABOUT
           </button>
         </Link>
         <Link to="/contact">
-          <button onClick={resetNavbar} className="py-1 hover:scale-110 transition duration-200">
+          <button onClick={resetNavbar} className="py-1 hover:scale-110 hover:font-semibold transition duration-200">
             CONTACT
           </button>
         </Link>
         <Link to="/blog">
-          <button onClick={resetNavbar} className="py-1 hover:scale-110 transition duration-200">
+          <button onClick={resetNavbar} className="py-1 hover:scale-110 hover:font-semibold transition duration-200">
             BLOG
           </button>
         </Link>
+        <button onClick={resetNavbar} className="absolute md:hidden block bottom-10">
+          <i className="bi bi-x-lg"></i>
+        </button>
       </div>
     </nav>
   );

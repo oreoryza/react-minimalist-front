@@ -2,10 +2,12 @@ import React from "react";
 import Header from "../components/Header";
 import Team from "../components/Team";
 import Brands from "../components/Brands";
+import SeoComponent from "../components/SeoComponent";
 
 const About = () => {
   return (
     <>
+    <SeoComponent page="about" />
       <Header mousePosition={"top"} text={"We specialize in problem solving."} />
       <div className="text-black lg:mx-16 mx-8 mt-24">
         <div className="flex flex-col gap-8">

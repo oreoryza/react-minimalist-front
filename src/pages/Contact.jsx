@@ -2,10 +2,12 @@ import React from "react";
 import Header from "../components/Header";
 import Brands from "../components/Brands";
 import Form from "../components/Form";
+import SeoComponent from "../components/SeoComponent";
 
 const Contact = () => {
   return (
     <>
+      <SeoComponent page="contact" />
       <Header
         left={"opacity-0"}
         mousePosition={"bottom"}
@@ -31,7 +33,9 @@ const Contact = () => {
         </div>
       </div>
       <div className="flex flex-col gap-12 lg:px-28 py-32">
-        <h2 className="text-4xl font-bold text-center">Come stop by our office sometime</h2>
+        <h2 className="text-4xl font-bold text-center">
+          Come stop by our office sometime
+        </h2>
         <div className="relative lg:block flex justify-center items-center">
           <img
             src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg"
@@ -39,7 +43,9 @@ const Contact = () => {
             className="h-full w-full object-cover"
           />
           <div className="absolute lg:bottom-8 lg:left-8 bg-white px-4 lg:pt-16 pb-2">
-            <h2 className="lg:text-4xl text-2xl font-bold pb-2">New York, USA</h2>
+            <h2 className="lg:text-4xl text-2xl font-bold pb-2">
+              New York, USA
+            </h2>
             <p>7626 W. 8th St. Massapequa, NY 11758</p>
             <div className="py-2">
               <a href="">info@dsgnr.com</a>

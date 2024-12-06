@@ -14,9 +14,8 @@ const Work = ({ layout, heightImg }) => {
   return (
     <div className={`${layout}`}>
       {portfolios.map((portfolio) => (
-        <Link to={`/our-work-detail/${portfolio.id}`}>
+        <Link key={portfolio.id} to={`/our-work-detail/${portfolio.id}`}>
           <div
-            key={portfolio.id}
             className={`group relative ${heightImg} overflow-hidden`}
           >
             <img src={portfolio.banner} className="w-full h-full object-cover" />

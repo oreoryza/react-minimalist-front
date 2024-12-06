@@ -2,10 +2,12 @@ import React from "react";
 import Header from "../components/Header";
 import Work from "../components/Work";
 import Brands from "../components/Brands";
+import SeoComponent from "../components/SeoComponent";
 
 const OurWork = () => {
   return (
     <>
+    <SeoComponent page="work" />
       <Header mousePosition={"top"} text={"The work we do, and the people we help."} />
       <div className="lg:mx-16 mx-8 mt-24">
         <h2 className="font-bold text-4xl">Featured Work</h2>

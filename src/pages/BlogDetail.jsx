@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import { useDispatch, useSelector } from "react-redux";
 import { detailBlogs } from "../redux/async/fetchData";

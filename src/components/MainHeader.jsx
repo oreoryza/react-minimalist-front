@@ -13,7 +13,7 @@ const MainHeader = () => {
                 <h1 className='lg:text-7xl text-5xl font-bold max-w-xl leading-tight my-8'>Let's create something great together.</h1>
                 <div className='mt-8 relative flex items-center'>
                     <div className='w-10 h-10 rounded-full bg-white'></div>
-                    <a href='' className='absolute z-10 text-black font-bold text-lg ml-4'>BOOK A FREE CALL <i class="bi bi-arrow-right ml-2"></i></a>
+                    <a href="callto:+5555555" className='absolute z-10 text-black font-bold text-lg ml-4'>BOOK A FREE CALL <i className="bi bi-arrow-right ml-2"></i></a>
                 </div>
             </div>
             <div className='absolute bottom-0 -mb-24 hidden lg:flex'>

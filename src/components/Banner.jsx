@@ -21,9 +21,9 @@ const Banner = () => {
             <br />
             Build Great Products.
           </h1>
-          <button className="bg-black text-white font-bold px-8 py-4 max-h-fit z-10">
+          <a href="callto:+5555555" className="bg-black text-white font-bold px-8 py-4 max-h-fit z-10">
             Book a free call
-          </button>
+          </a>
         </div>
       </div>
       <div className="flex justify-end mt-[-15.5%] bg-dark-yellow">

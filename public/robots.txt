@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://oz-minimalist.vercel.app/sitemap.xml

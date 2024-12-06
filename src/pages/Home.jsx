@@ -5,18 +5,22 @@ import Testimoni from "../components/Testimoni";
 import Brands from "../components/Brands";
 import BlogList from "../components/BlogList";
 import MainHeader from "../components/MainHeader";
+import Work from "../components/Work";
 //icon svgs
 import penTool from "../assets/pen-tool-2.svg";
 import search from "../assets/search-normal.svg";
 import briefcase from "../assets/briefcase.svg";
 import scroll from "../assets/scroll.svg";
-import Work from "../components/Work";
 import handPhone from "../assets/handPhone.svg";
-
+import rocket from "../assets/rocket.png";
+import target from "../assets/target.png";
+import lamp from "../assets/lamp.png";
+import SeoComponent from "../components/SeoComponent";
 
 const Home = () => {
   return (
     <>
+    <SeoComponent page="home" />
       <MainHeader />
       <div className="border-b-2 border-black/[.2]">
         <div className="grid lg:grid-cols-4 grid-cols-2 lg:mx-28 mx-8 my-20">
@@ -63,9 +67,11 @@ const Home = () => {
                 We help businesses grow, launch products and build enduring
                 relationships with our communities.
               </p>
-              <a href="" className="underline underline-offset-8 max-w-fit">
-                OUR INFO
-              </a>
+              <Link to="/about">
+                <a className="font-medium underline underline-offset-8 max-w-fit">
+                  OUR INFO
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -88,7 +94,10 @@ const Home = () => {
             </li>
           </ul>
         </div>
-        <Work heightImg={"h-72"} layout={"grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-2"} />
+        <Work
+          heightImg={"h-72"}
+          layout={"grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-2"}
+        />
       </div>
       <div className="flex flex-col justify-center items-center py-16 bg-gradient-to-b from-white to-gray">
         <div className="flex lg:flex-row flex-col justify-evenly lg:items-start items-center w-full py-28">
@@ -111,7 +120,13 @@ const Home = () => {
             <ul className="flex flex-col gap-12">
               <li className="flex justify-center items-start gap-4">
                 <div>
-                  <div className="w-16 h-16 rounded-full bg-white shadow-md"></div>
+                  <div className="w-16 h-16 rounded-full p-4 bg-white shadow-md">
+                    <img
+                      src={lamp}
+                      alt="lamp"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-col gap-2">
                   <p className="font-bold">Idea Initiation</p>
@@ -123,25 +138,35 @@ const Home = () => {
               </li>
               <li className="flex justify-center items-start gap-4">
                 <div>
-                  <div className="w-16 h-16 rounded-full bg-white shadow-md"></div>
+                  <div className="w-16 h-16 rounded-full p-4 bg-white shadow-md">
+                    <img
+                      src={target}
+                      alt="target"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <p className="font-bold">Idea Initiation</p>
+                  <p className="font-bold">Execution</p>
                   <p>
-                    For a start, we’ll uncover what makes you stand apart and
-                    creatively position your brand and business.
+                  To deliver exceptionally, we dig deep into a brand’s essence and values, clearly understand them, then inject them into the design
                   </p>
                 </div>
               </li>
               <li className="flex justify-center items-start gap-4">
                 <div>
-                  <div className="w-16 h-16 rounded-full bg-white shadow-md"></div>
+                  <div className="w-16 h-16 rounded-full p-4 bg-white shadow-md">
+                    <img
+                      src={rocket}
+                      alt="rocket"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <p className="font-bold">Idea Initiation</p>
+                  <p className="font-bold">Launch</p>
                   <p>
-                    For a start, we’ll uncover what makes you stand apart and
-                    creatively position your brand and business.
+                  We provide full-service solutions to help you launch, market, and grow your business.
                   </p>
                 </div>
               </li>
@@ -150,15 +175,16 @@ const Home = () => {
         </div>
         <p className="text-center px-8">
           Wherever you are in your journey, we’d love to hear from you.{" "}
-          <a href="" className="underline underline-offset-4 font-bold">
+          <a
+            href="callto:+5555555"
+            className="underline underline-offset-4 font-bold"
+          >
             Book a free call
           </a>
         </p>
       </div>
       <div className="flex justify-between items-center lg:ml-52 lg:mr-12 mx-8 mt-32 mb-24">
-        <h2 className=" font-bold text-4xl">
-          What our clients say about us
-        </h2>
+        <h2 className=" font-bold text-4xl">What our clients say about us</h2>
       </div>
       <div className="mx-16 mb-48">
         <Testimoni />
@@ -168,7 +194,9 @@ const Home = () => {
       </div>
       <div className="mb-32">
         <div className="flex lg:flex-row flex-col justify-between lg:items-center gap-4 lg:ml-52 lg:mr-40 mx-8 mt-32 mb-24">
-          <h2 className=" font-bold text-4xl">Check out our interesting articles</h2>
+          <h2 className=" font-bold text-4xl">
+            Check out our interesting articles
+          </h2>
           <Link to="/blog" className="underline underline-offset-4 font-bold ">
             SEE ALL
           </Link>
