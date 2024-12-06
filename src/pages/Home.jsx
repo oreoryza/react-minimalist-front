@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 //import components
 import Testimoni from "../components/Testimoni";
 import Brands from "../components/Brands";
@@ -18,34 +19,34 @@ const Home = () => {
     <>
       <MainHeader />
       <div className="border-b-2 border-black/[.2]">
-        <div className="flex justify-between items-center mx-28 my-20">
-          <div className="flex flex-col items-center gap-8 px-4">
+        <div className="grid lg:grid-cols-4 grid-cols-2 lg:mx-28 mx-8 my-20">
+          <div className="flex flex-col items-center gap-8 py-8 px-4">
             <object data={penTool} type="image/svg+xml" className="w-8">
               <img src={penTool} alt="penTool" />
             </object>
-            <p>EXCEPTIONAL DESIGN</p>
+            <p className="text-center">EXCEPTIONAL DESIGN</p>
           </div>
-          <div className="flex flex-col items-center gap-8 px-4">
+          <div className="flex flex-col items-center gap-8 py-8 px-4">
             <object data={search} type="image/svg+xml" className="w-8">
               <img src={search} alt="search" />
             </object>
-            <p>IN-DEPTH RESEARCH</p>
+            <p className="text-center">IN-DEPTH RESEARCH</p>
           </div>
-          <div className="flex flex-col items-center gap-8 px-4">
+          <div className="flex flex-col items-center gap-8 py-8 px-4">
             <object data={briefcase} type="image/svg+xml" className="w-8">
               <img src={briefcase} alt="briefcase" />
             </object>
-            <p>PRODUCT MANAGEMENT</p>
+            <p className="text-center">PRODUCT MANAGEMENT</p>
           </div>
-          <div className="flex flex-col items-center gap-8 px-4">
+          <div className="flex flex-col items-center gap-8 py-8 px-4">
             <object data={scroll} type="image/svg+xml" className="w-8">
               <img src={scroll} alt="scroll" />
             </object>
-            <p>NO-CODE DEVELOPMENT</p>
+            <p className="text-center">NO-CODE DEVELOPMENT</p>
           </div>
         </div>
-        <div className="flex justify-start mx-28 my-32 gap-24">
-          <div className="flex items-end gap-12">
+        <div className="flex lg:flex-row flex-col justify-start lg:mx-28 mx-8 my-32 gap-24">
+          <div className="flex lg:flex-row flex-col items-end gap-12">
             <div className="flex">
               <h1 className="text-7xl text-yellow font-bold">hello</h1>
               <p className="text-8xl mt-[-30px] text-black">.</p>
@@ -57,7 +58,7 @@ const Home = () => {
             </div>
           </div>
           <div className="py-2">
-            <div className="flex flex-col justify-between h-full max-w-80">
+            <div className="flex flex-col justify-between gap-4 h-full max-w-80">
               <p>
                 We help businesses grow, launch products and build enduring
                 relationships with our communities.
@@ -70,9 +71,9 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <div className="flex justify-between items-center ml-52 mr-12 mt-32 mb-24">
+        <div className="flex lg:flex-row flex-col justify-between lg:items-center lg:ml-52 lg:mr-12 gap-8 mx-8 mt-32 mb-24">
           <h2 className=" font-bold text-4xl">Our Work So Far</h2>
-          <ul className="flex gap-8">
+          <ul className="flex flex-wrap gap-8">
             <li>
               <a href="">ALL</a>
             </li>
@@ -87,27 +88,27 @@ const Home = () => {
             </li>
           </ul>
         </div>
-        <Work heightImg={"h-72"} layout={"grid grid-cols-4 gap-2"} />
+        <Work heightImg={"h-72"} layout={"grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-2"} />
       </div>
       <div className="flex flex-col justify-center items-center py-16 bg-gradient-to-b from-white to-gray">
-        <div className="flex justify-evenly items-start w-full py-28">
-          <div className="relative flex justify-center items-end">
-            <h1 className="absolute text-dark-yellow  text-start text-[265px] font-bold ml-10 mb-16 leading-[.7]">
+        <div className="flex lg:flex-row flex-col justify-evenly lg:items-start items-center w-full py-28">
+          <div className="relative flex justify-center items-end mb-16">
+            <h1 className="absolute text-dark-yellow text-start lg:text-[16rem] text-[10rem] font-bold ml-10 mb-16 leading-[.7]">
               des gnr.
             </h1>
             <object
               data={handPhone}
               type="image/svg+xml"
-              className="max-w-sm z-10"
+              className="lg:max-w-sm md:max-w-xs max-w-64 z-10"
             >
               <img src={handPhone} alt="handPhone" />
             </object>
           </div>
-          <div className="max-w-[375px]">
+          <div className="max-w-[22rem] lg:p-0 px-2">
             <h2 className=" text-4xl font-bold leading-normal mb-8">
               A simple, yet effective three step process.
             </h2>
-            <ul className="flex flex-col gap-8">
+            <ul className="flex flex-col gap-12">
               <li className="flex justify-center items-start gap-4">
                 <div>
                   <div className="w-16 h-16 rounded-full bg-white shadow-md"></div>
@@ -147,14 +148,14 @@ const Home = () => {
             </ul>
           </div>
         </div>
-        <p className="">
+        <p className="text-center px-8">
           Wherever you are in your journey, we’d love to hear from you.{" "}
           <a href="" className="underline underline-offset-4 font-bold">
             Book a free call
           </a>
         </p>
       </div>
-      <div className="flex justify-between items-center ml-52 mr-12 mt-32 mb-24">
+      <div className="flex justify-between items-center lg:ml-52 lg:mr-12 mx-8 mt-32 mb-24">
         <h2 className=" font-bold text-4xl">
           What our clients say about us
         </h2>
@@ -162,17 +163,17 @@ const Home = () => {
       <div className="mx-16 mb-48">
         <Testimoni />
       </div>
-      <div className="flex justify-center items-center py-44 px-36 bg-gray-30">
+      <div className="flex justify-center items-center lg:py-44 lg:px-36 py-16 px-8 bg-gray-30">
         <Brands bg={"bg-gray-30"} filter={"grayscale"} />
       </div>
       <div className="mb-32">
-        <div className="flex justify-between items-center ml-52 mr-40 mt-32 mb-24">
+        <div className="flex lg:flex-row flex-col justify-between lg:items-center gap-4 lg:ml-52 lg:mr-40 mx-8 mt-32 mb-24">
           <h2 className=" font-bold text-4xl">Check out our interesting articles</h2>
-          <a href="" className="underline underline-offset-4 font-bold">
+          <Link to="/blog" className="underline underline-offset-4 font-bold ">
             SEE ALL
-          </a>
+          </Link>
         </div>
-        <div className="mx-36">
+        <div className="lg:mx-36 mx-8">
           <BlogList slice={3} />
         </div>
       </div>

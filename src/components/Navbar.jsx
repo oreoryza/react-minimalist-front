@@ -31,7 +31,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`fixed top-0 ${bgColor} z-20 flex justify-between items-center py-6 px-16 w-full`}>
+    <nav className={`fixed top-0 ${bgColor} z-20 flex justify-between items-center py-6 lg:px-16 px-8 w-full`}>
       <Link to={"/"}>
         <img src={logo} alt="logo" />
       </Link>
@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className="h-1 w-full bg-black"></div>
       </button>
       <div
-        className={`absolute top-16 right-24 ${
+        className={`absolute top-16 lg:right-24 right-16 ${
           isOpen ? "flex" : "hidden"
         } flex-col items-center justify-center bg-white py-2 px-6`}
       >
@@ -68,7 +68,7 @@ const Navbar = () => {
           </button>
         </Link>
       </div>
-    </div>
+    </nav>
   );
 };
 

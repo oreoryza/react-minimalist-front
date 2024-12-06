@@ -7,10 +7,10 @@ const About = () => {
   return (
     <>
       <Header mousePosition={"top"} text={"We specialize in problem solving."} />
-      <div className="text-black mx-16 mt-24">
+      <div className="text-black lg:mx-16 mx-8 mt-24">
         <div className="flex flex-col gap-8">
           <h2 className="font-bold text-4xl">Featured Work</h2>
-          <div className="flex justify-between items-center w-full">
+          <div className="flex lg:flex-row flex-col justify-between lg:items-center gap-4 w-full">
             <p className="text-xl max-w-2xl">
               We love what we do and create partnerships with our clients to
               ensure their digital transformation is positioned for long-term
@@ -30,12 +30,12 @@ const About = () => {
           <h2 className="font-bold text-4xl">
             Meet the heroes behind the magic
           </h2>
-          <div className="py-24 px-8">
+          <div className="py-24 lg:px-8">
             <Team />
           </div>
         </div>
       </div>
-      <div className="flex justify-between items-center bg-black py-12 px-20">
+      <div className="flex flex-wrap justify-between items-center bg-black py-12 lg:px-20 gap-8 px-8">
         <div>
           <h2 className="text-4xl font-bold text-dark-yellow">350 +</h2>
           <p className="text-white">Clients Worldwide</p>
@@ -53,7 +53,7 @@ const About = () => {
           <p className="text-white">Revenue Generated</p>
         </div>
       </div>
-      <div className="mx-36 py-12">
+      <div className="lg:mx-36 mx-8 py-12">
         <div className="flex flex-col items-center gap-16 pt-16 pb-44">
           <h2 className="font-bold text-4xl text-center max-w-2xl">
             We worked with the world’s biggest brands and the most innovative

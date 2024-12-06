@@ -37,7 +37,7 @@ const  Brands = ({bg, filter}) => {
     ]
 
     return (
-        <div className="grid grid-cols-4 gap-[2px] bg-gray">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-[.1rem] bg-gray">
             {brands.map((item) => (
                 <div key={item.id} className={`flex justify-center items-center ${bg}`}>
                     <img className={`scale-75 ${filter}`} src={item.img} alt={item.id} />

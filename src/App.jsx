@@ -9,6 +9,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import BlogDetail from "./pages/BlogDetail";
+import OurWorkDetail from "./pages/OurWorkDetail";
 
 const App = () => {
   return (
@@ -20,7 +22,9 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/our-work" element={<OurWork />} />
+        <Route path="/our-work-detail/:id" element={<OurWorkDetail />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog-detail/:id" element={<BlogDetail />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Banner />

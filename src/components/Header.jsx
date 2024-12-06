@@ -20,26 +20,32 @@ const Header = ({ text, left, mousePosition }) => {
           <img src={pattern} alt="pattern" />
         </object>
         <div className="absolute flex flex-col justify-center items-center w-full mb-12">
-          <h1 className="text-7xl font-bold text-center max-w-2xl leading-tight my-8">
+          <h1 className="lg:text-7xl text-5xl font-bold text-center max-w-2xl px-2 leading-tight my-8">
             {text}
           </h1>
+          <div className={` ${mouseTop} flex`}>
           <object
             data={mouse}
             type="image/svg+xml"
-            className={`${mouseTop} mt-[-1%] w-12`}
+            className="hidden md:block mt-[-1%] w-12"
           >
             <img src={mouse} alt="mouse" />
           </object>
+          <div className="w-1 h-3 hidden md:block rounded bg-black scroll-down"></div>
+          <div className="w-6 h-6 md:hidden block rounded-full bg-black/[.5] scroll-up"></div>
+          </div>
         </div>
-        <div className="absolute bottom-0 flex items-end w-full px-28">
+        <div className="absolute bottom-0 flex items-end w-full lg:px-28 px-2">
           <img src={hands1} alt="hands1" className={`${left} w-1/2`} />
           <img src={hands2} alt="hands2" className="w-1/2" />
         </div>
       </div>
       <div className={` ${mouseBottom} flex justify-center w-full py-6`}>
-        <object data={mouse} type="image/svg+xml" className="w-12">
+        <object data={mouse} type="image/svg+xml" className="hidden md:block w-12">
           <img src={mouse} alt="mouse" />
         </object>
+        <div className="w-1 h-3 hidden md:block rounded bg-black scroll-down"></div>
+        <div className="w-6 h-6 md:hidden block rounded-full bg-black/[.5] scroll-up"></div>
       </div>
     </div>
   );

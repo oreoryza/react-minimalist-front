@@ -1,38 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaQuoteLeft } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchTestimonial } from "../redux/async/fetchData";
 
 const Testimoni = () => {
-  const [testimon, setTestimon] = useState([
-    {
-      id: 1,
-      img: "https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg",
-      name: "John Doe",
-      job: "CEO",
-      desc: "I would like to say that this experience was great. The team was very professional and answered all our questions and was committed to completing our project on time. We are happy to have worked with dsgnr. and would hire them again and would recommend them to anyone else looking for a designer and developer. They know their stuff!",
-    },
-    {
-      id: 2,
-      img: "https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg",
-      name: "John Doe",
-      job: "CEO",
-      desc: "Great work ethic and very reliable! Brooklyn was our logo designer. She walked us through many iterations and guided us on all aspects of the process. Very professional, will use them again soon!”",
-    },
-  ]);
+  const dispatch = useDispatch()
+  const {testimonials} = useSelector((state) => state.fetch)
+
+  useEffect(() => {
+    dispatch(fetchTestimonial())
+  }, [dispatch])
+
   return (
     <div>
-      <div className="flex gap-10">
-        {testimon.map((item) => (
-          <div key={item.id} className="flex justify-center items-start gap-4 max-w-xl">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
+        {testimonials.map((testimoni) => (
+          <div key={testimoni.id} className="flex justify-center items-start gap-4 max-w-xl lg:mb-0 mb-6">
             <div>
             <FaQuoteLeft className="text-dark-yellow text-xl" />
             </div>
             <div className="flex flex-col justify-between h-full gap-8">
-              <p className="text-black">{item.desc}</p>
+              <p className="text-black">{testimoni.message}</p>
               <div className="flex gap-8">
-                <img src={item.img} className="w-14 h-14 rounded-full" />
+                <div className="w-14 h-14 rounded-full overflow-hidden">
+                <img src={testimoni.foto_profile} className="w-full h-full object-cover" />
+                </div>
                 <div className="flex flex-col justify-center">
-                  <p className="text-xl font-bold">{item.name}</p>
-                  <p className="text-black/[.4]">{item.job}</p>
+                  <p className="text-xl font-bold">{testimoni.name}</p>
+                  <p className="text-black/[.4]">{testimoni.title}</p>
                 </div>
               </div>
             </div>

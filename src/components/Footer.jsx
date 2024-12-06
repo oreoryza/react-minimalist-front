@@ -7,15 +7,15 @@ import { FaTwitter, FaFacebookF, FaGooglePlusG } from "react-icons/fa";
 
 const  Footer = () => {
   return (
-    <div className='text-white bg-black p-16'>
-        <div className='flex gap-64'>
+    <div className='text-white bg-black lg:p-16 py-16 px-8'>
+        <div className='flex md:flex-row flex-col lg:gap-64 gap-24'>
             <div className='flex flex-col gap-6 max-w-md'>
                 <object data={logo} type="image/svg+xml" className='max-w-24'>
                     <img src={logo} alt="Logo" />
                 </object>
                 <p>Dsgnr. is an award winning creative and design agency 
                 based in New York, USA.</p>
-                <button className='flex gap-12 border-2 border-dark-yellow py-4 px-6 max-w-xs hover:bg-dark-yellow hover:text-black transition duration-300'>
+                <button className='flex gap-12 border-2 border-dark-yellow py-4 px-6 max-w-xs hover:bg-dark-yellow transition duration-300'>
                     <object data={notif} type="image/svg+xml" className='w-6'>
                         <img src={notif} alt="notification" />
                     </object>
@@ -45,7 +45,7 @@ const  Footer = () => {
                 </div>
             </div>
         </div>
-        <div className='flex justify-between mt-16'>
+        <div className='flex lg:flex-row flex-col-reverse justify-between mt-16 gap-4'>
             <div className='flex gap-8'>
                 <p>Privacy Policy</p>
                 <p>Terms</p>

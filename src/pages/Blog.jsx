@@ -1,17 +1,23 @@
-import React from 'react'
-import Header from '../components/Header'
-import Brands from '../components/Brands'
-import BlogList from '../components/BlogList'
+import React, { useEffect } from "react";
+import Header from "../components/Header";
+import Brands from "../components/Brands";
+import BlogList from "../components/BlogList";
 
 const Blog = () => {
   return (
     <>
-    <Header left={"opacity-0"} mousePosition={"bottom"} text={"Read best articles from us."} />
-    <div className='flex flex-col gap-8 mx-36 pt-12 pb-44'>
-        <h2 className="text-4xl font-bold">Check out our interesting articles</h2>
+      <Header
+        left={"opacity-0"}
+        mousePosition={"bottom"}
+        text={"Read best articles from us."}
+      />
+      <div className="flex flex-col gap-8 lg:mx-36 mx-8 pt-12 pb-44">
+        <h2 className="text-4xl font-bold">
+          Check out our interesting articles
+        </h2>
         <BlogList button={"flex"} />
-    </div>
-    <div className="flex justify-between items-center bg-black py-12 px-20">
+      </div>
+      <div className="flex flex-wrap justify-between items-center bg-black py-12 lg:px-20 gap-8 px-8">
         <div>
           <h2 className="text-4xl font-bold text-dark-yellow">350 +</h2>
           <p className="text-white">Clients Worldwide</p>
@@ -29,7 +35,7 @@ const Blog = () => {
           <p className="text-white">Revenue Generated</p>
         </div>
       </div>
-      <div className="mx-36 py-12">
+      <div className="lg:mx-36 mx-8 py-12">
         <div className="flex flex-col items-center gap-16 pt-16 pb-44">
           <h2 className="font-bold text-4xl text-center max-w-2xl">
             We worked with the world’s biggest brands and the most innovative
@@ -39,7 +45,7 @@ const Blog = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;

@@ -7,7 +7,7 @@ import hand3 from "../assets/image6.png";
 const Banner = () => {
   return (
     <div className="bg-dark-yellow w-full font-open-sans my-12">
-      <div className="flex items-center gap-28">
+      <div className="flex md:flex-row flex-col items-center xl:gap-28 lg:gap-20 md:gap-12">
         <object
           data={Logo}
           type="image/svg+xml"
@@ -15,13 +15,13 @@ const Banner = () => {
         >
           <img src={Logo} alt="Logo" />
         </object>
-        <div className="flex items-center gap-12 mt-[-5%]">
+        <div className="flex lg:flex-row flex-col lg:items-center gap-12 mt-[-5%] px-4 md:mb-0 mb-24">
           <h1 className="text-4xl font-bold">
             Grow Your Business.
             <br />
             Build Great Products.
           </h1>
-          <button className="bg-black text-white font-bold px-8 py-4 max-h-fit">
+          <button className="bg-black text-white font-bold px-8 py-4 max-h-fit z-10">
             Book a free call
           </button>
         </div>

@@ -6,13 +6,13 @@ import Brands from "../components/Brands";
 const OurWork = () => {
   return (
     <>
-      <Header text={"The work we do, and the people we help."} />
-      <div className="mx-16 mt-24">
+      <Header mousePosition={"top"} text={"The work we do, and the people we help."} />
+      <div className="lg:mx-16 mx-8 mt-24">
         <h2 className="font-bold text-4xl">Featured Work</h2>
       </div>
-      <div className="mx-36 my-8">
+      <div className="lg:mx-36 mx-8 my-8">
         <div className="flex justify-end items-center w-full">
-          <p className="max-w-[45%] text-2xl font-medium text-end">
+          <p className="max-w-md text-2xl font-medium text-end">
             We are an award-winning creative & design agency committed to
             excellence since forever.
           </p>
