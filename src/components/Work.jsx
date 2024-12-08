@@ -5,7 +5,7 @@ import { fetchPortfolios } from "../redux/async/fetchData";
 
 const Work = ({ layout, heightImg }) => {
   const dispatch = useDispatch();
-  const {portfolios} = useSelector((state) => state.fetch);
+  const {portfolios, loading} = useSelector((state) => state.fetch);
 
   useEffect(() => {
     dispatch(fetchPortfolios());
@@ -14,6 +14,16 @@ const Work = ({ layout, heightImg }) => {
   return (
     <div className={`${layout}`}>
       {portfolios.map((portfolio) => (
+        <>
+        {loading ? (
+          <div class="border border-black shadow rounded-md p-2 max-w-sm w-full mx-auto">
+          <div class="animate-pulse flex space-x-4">
+            <div class="flex-1 space-y-6 py-1">
+              <div class="h-64 bg-gray rounded"></div>
+              </div>
+            </div>
+          </div>
+        ) : (
         <Link key={portfolio.id} to={`/our-work-detail/${portfolio.id}`}>
           <div
             className={`group relative ${heightImg} overflow-hidden`}
@@ -24,6 +34,8 @@ const Work = ({ layout, heightImg }) => {
             </div>
           </div>
         </Link>
+      )}
+      </>
       ))}
     </div>
   );

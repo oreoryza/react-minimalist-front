@@ -6,7 +6,7 @@ const MetadataContext = createContext();
 
 const MetadataProvider = ({ children }) => {
   const defaultMetadata = {
-    title: 'OZ Website',
+    title: 'Dsgnr.',
     description: 'An award winning creative and design agency based in New York, USA.',
     keywords: 'oz, design, agency, website',
     author: 'Oryza Sativa',
@@ -14,31 +14,25 @@ const MetadataProvider = ({ children }) => {
 
   const metadata = {
     about: {
-      title: 'About Us',
+      title: 'About Us | Dsgnr.',
       description: 'This is About page, you can find our mission & vision, and our team member here.',
       keywords: 'About Us, Team',
       author: 'Oryza Sative',
     },
     blog: {
-      title: 'Blog',
+      title: 'Blog | Dsgnr.',
       description: 'This is Our Blog Page, you can find our latest blog or article posts here.',
       keywords: 'Blog',
       author: 'Oryza Sativa',
     },
     contact: {
-      title: 'Contact',
+      title: 'Contact | Dsgnr.',
       description: 'This is Contact page, you can find our contact information here.',
       keywords: 'Contact',
       author: 'Oryza Sativa',
     },
-    home: {
-      title: 'Home',
-      description: 'This is Home page, you can find our latest news or articles here.',
-      keywords: 'Home',
-      author: 'Oryza Sativa',
-    },
     work: {
-      title: 'Our Work',
+      title: 'Our Work | Dsgnr.',
       description: 'This is Our Work page, you can find our latest work or projects here.',
       keywords: 'Our Work',
       author: 'Oryza Sativa',

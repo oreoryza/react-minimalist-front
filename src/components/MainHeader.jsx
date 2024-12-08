@@ -10,7 +10,7 @@ const MainHeader = () => {
                 <img src={pattern} alt="pattern" />
             </object>
             <div className='absolute flex flex-col justify-center font-open-sans mx-[16.5%]'>
-                <h1 className='lg:text-7xl text-5xl font-bold max-w-xl leading-tight my-8'>Let's create something great together.</h1>
+                <h1 className='lg:text-7xl text-5xl font-bold max-w-xl leading-tight my-14'>Let's create something great together.</h1>
                 <div className='mt-8 relative flex items-center'>
                     <div className='w-10 h-10 rounded-full bg-white'></div>
                     <a href="callto:+5555555" className='absolute z-10 text-black font-bold text-lg ml-4'>BOOK A FREE CALL <i className="bi bi-arrow-right ml-2"></i></a>

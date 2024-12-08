@@ -6,7 +6,7 @@ import parse from "html-react-parser";
 
 const BlogList = ({ slice, button = "hidden" }) => {
   const dispatch = useDispatch();
-  const { blogs } = useSelector((state) => state.fetch);
+  const { blogs, loading } = useSelector((state) => state.fetch);
 
   useEffect(() => {
     dispatch(fetchBlogs());
@@ -18,6 +18,23 @@ const BlogList = ({ slice, button = "hidden" }) => {
     <>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
         {blogsSlice.map((blog, index) => (
+          <>
+          {loading ? (
+            <div class="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
+            <div class="animate-pulse flex space-x-4">
+              <div class="flex-1 space-y-6 py-1">
+                <div class="h-72 bg-gray rounded"></div>
+                <div class="space-y-3">
+                  <div class="grid grid-cols-3 gap-4">
+                    <div class="h-8 bg-gray rounded col-span-2"></div>
+                  </div>
+                  <div class="h-2 bg-gray rounded"></div>
+                  <div class="h-2 bg-gray rounded"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          ) : (
           <div key={index} className="bg-white rounded-lg shadow-md p-4">
             <div className="h-72">
               <img
@@ -41,6 +58,8 @@ const BlogList = ({ slice, button = "hidden" }) => {
               </Link>
             </div>
           </div>
+        )}
+        </>
         ))}
       </div>
       <div className={`${button} justify-center w-full mt-16`}>

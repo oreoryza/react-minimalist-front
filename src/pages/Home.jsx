@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 //import components
 import Testimoni from "../components/Testimoni";
@@ -18,6 +18,26 @@ import lamp from "../assets/lamp.png";
 import SeoComponent from "../components/SeoComponent";
 
 const Home = () => {
+  const [activeLink, setActiveLink] = useState("");
+  const navLinks = [
+    {
+      name: "ALL",
+    },
+    {
+      name: "BRANDING",
+    },
+    {
+      name: "ILLUSTRATION",
+    },
+    {
+      name: "PRODUCT DESIGN",
+    },
+  ];
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
   return (
     <>
     <SeoComponent page="home" />
@@ -80,18 +100,18 @@ const Home = () => {
         <div className="flex lg:flex-row flex-col justify-between lg:items-center lg:ml-52 lg:mr-12 gap-8 mx-8 mt-32 mb-24">
           <h2 className=" font-bold text-4xl">Our Work So Far</h2>
           <ul className="flex flex-wrap gap-8">
-            <li>
-              <a href="">ALL</a>
-            </li>
-            <li>
-              <a href="">BRANDING</a>
-            </li>
-            <li>
-              <a href="">ILLUSTRATION</a>
-            </li>
-            <li>
-              <a href="">PRODUCT DESIGN</a>
-            </li>
+          {navLinks.map((links, index) => (
+              <li
+                onClick={() => handleLinkClick(links.name)}
+                className={`${
+                  activeLink === links.name
+                    ? "text-black font-bold underline underline-offset-4"
+                    : "text-black/[.5]"
+                } hover:text-black cursor-pointer`}
+              >
+                {links.name}
+              </li>
+          ))}
           </ul>
         </div>
         <Work

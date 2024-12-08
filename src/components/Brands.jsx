@@ -8,31 +8,31 @@ const  Brands = ({bg, filter}) => {
         },
         {
             id: 2,
-            img: "https://www.logo.wine/a/logo/Spotify/Spotify-Logo.wine.svg",
+            img: "https://www.logo.wine/a/logo/Dropbox_(service)/Dropbox_(service)-Logo.wine.svg",
         },
         {
             id: 3,
-            img: "https://www.logo.wine/a/logo/Spotify/Spotify-Logo.wine.svg",
+            img: "https://www.logo.wine/a/logo/Tesla_Grohmann_Automation/Tesla_Grohmann_Automation-Logo.wine.svg",
         },
         {
             id: 4,
-            img: "https://www.logo.wine/a/logo/Spotify/Spotify-Logo.wine.svg",
+            img: "https://www.logo.wine/a/logo/Reddit/Reddit-Logo.wine.svg",
         },
         {
             id: 5,
-            img: "https://www.logo.wine/a/logo/Spotify/Spotify-Logo.wine.svg",
+            img: "https://www.logo.wine/a/logo/Google/Google-Logo.wine.svg",
         },
         {
             id: 6,
-            img: "https://www.logo.wine/a/logo/Spotify/Spotify-Logo.wine.svg",
+            img: "https://www.logo.wine/a/logo/Stripe_(company)/Stripe_(company)-Logo.wine.svg",
         },
         {
             id: 7,
-            img: "https://www.logo.wine/a/logo/Spotify/Spotify-Logo.wine.svg",
+            img: "https://www.logo.wine/a/logo/Amazon_(company)/Amazon_(company)-Logo.wine.svg",
         },
         {
             id: 8,
-            img: "https://www.logo.wine/a/logo/Spotify/Spotify-Logo.wine.svg",
+            img: "https://www.logo.wine/a/logo/Airbnb/Airbnb-Logo.wine.svg",
         },
     ]
 

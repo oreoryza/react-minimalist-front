@@ -22,7 +22,13 @@ const App = () => {
         <div className="font-open-sans">
           <Navbar />
           <ScrollToTop />
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense
+            fallback={
+              <div className="flex justify-center items-center w-full min-h-screen">
+                <div className="loader"></div>
+              </div>
+            }
+          >
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />

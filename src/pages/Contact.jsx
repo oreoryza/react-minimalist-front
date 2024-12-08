@@ -38,8 +38,8 @@ const Contact = () => {
         </h2>
         <div className="relative lg:block flex justify-center items-center">
           <img
-            src="https://letsenhance.io/static/03620c83508fc72c6d2b218c7e304ba5/11499/UpscalerAfter.jpg"
-            alt=""
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/1_times_square_night_2013.jpg/1920px-1_times_square_night_2013.jpg"
+            alt="New York"
             className="h-full w-full object-cover"
           />
           <div className="absolute lg:bottom-8 lg:left-8 bg-white px-4 lg:pt-16 pb-2">
